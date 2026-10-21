@@ -83,9 +83,10 @@ LANDING
     position: relative;
     transition: all 300ms;
     margin: 0 24px;
+    
 }
 
-.nav__link:after {
+.nav__link:hover:after {
     content: "";
     position: absolute;
     left: 0;
@@ -94,8 +95,9 @@ LANDING
     width: 100%;
     background-color: #6415ff;
     transition: all 300ms ease;
-    opacity: 0;
+    opacity: 1;
 }
+
 
 .nav__link--login {
     margin: 0 24px 0 48px;
@@ -106,6 +108,18 @@ border-bottom: 2px solid transparent;
     position: relative;
     transition: all 300ms;
     font-size: 14px;
+}
+
+.nav__link--login:hover:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    background-color: #6415ff;
+    transition: all 300ms ease;
+    opacity: 1;
 }
 
 .nav__link--primary {
@@ -119,4 +133,26 @@ font-weight: 600;
     width: auto;
     line-height: 1.5;
     font-size: 14px;
+}
+
+.nav__link--primary:hover {
+    background-color: #5011cc;
+}
+
+
+/* 
+
+SCREEN SIZE
+
+*/
+
+
+@media (max-width: 1024px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
 }
